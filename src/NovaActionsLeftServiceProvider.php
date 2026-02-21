@@ -13,10 +13,10 @@ class NovaActionsLeftServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::script('nova-actions-left', __DIR__.'/../dist/js/tool.js');
+            Nova::mix('nova-actions-left', __DIR__.'/../dist/mix-manifest.json');
         });
     }
 
@@ -25,8 +25,7 @@ class NovaActionsLeftServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
-
     }
 }

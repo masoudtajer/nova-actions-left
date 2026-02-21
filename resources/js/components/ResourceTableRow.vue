@@ -189,7 +189,7 @@
 
 <script>
 import filter from 'lodash/filter'
-import { Inertia } from '@inertiajs/inertia'
+import { router as Inertia } from '@inertiajs/vue3'
 
 export default {
   emits: ['actionExecuted'],
