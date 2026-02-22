@@ -62,7 +62,15 @@
           class="toolbar-button hover:text-primary-500 px-2 disabled:opacity-50 disabled:pointer-events-none"
           @click.stop
         >
-          <Icon type="eye" />
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 3C6.364 3 3.259 5.29 2 8.5 3.259 11.71 6.364 14 10 14s6.741-2.29 8-5.5C16.741 5.29 13.636 3 10 3Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" />
+            <path d="M10 10.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+          </svg>
         </Link>
 
         <!-- Edit Pivot Button -->
@@ -77,7 +85,14 @@
           class="toolbar-button hover:text-primary-500 px-2 disabled:opacity-50 disabled:pointer-events-none"
           @click.stop
         >
-          <Icon type="pencil-alt" />
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="m13.828 2.172 4 4a1 1 0 0 1 0 1.414l-9.193 9.192a1 1 0 0 1-.465.263l-4 1a1 1 0 0 1-1.212-1.212l1-4a1 1 0 0 1 .263-.465l9.193-9.193a1 1 0 0 1 1.414 0ZM12.414 5 5.849 11.565l-.646 2.586 2.586-.646L14.354 6.94 12.414 5Z" />
+          </svg>
         </Link>
 
         <!-- Edit Resource Link -->
@@ -92,7 +107,14 @@
           class="toolbar-button hover:text-primary-500 px-2 disabled:opacity-50 disabled:pointer-events-none"
           @click.stop
         >
-          <Icon type="pencil-alt" />
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="m13.828 2.172 4 4a1 1 0 0 1 0 1.414l-9.193 9.192a1 1 0 0 1-.465.263l-4 1a1 1 0 0 1-1.212-1.212l1-4a1 1 0 0 1 .263-.465l9.193-9.193a1 1 0 0 1 1.414 0ZM12.414 5 5.849 11.565l-.646 2.586 2.586-.646L14.354 6.94 12.414 5Z" />
+          </svg>
         </Link>
 
         <!-- Delete Resource Link -->
@@ -109,7 +131,14 @@
           class="toolbar-button hover:text-primary-500 px-2 disabled:opacity-50 disabled:pointer-events-none"
           @click.stop="openDeleteModal"
         >
-          <Icon type="trash" />
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M7 2a1 1 0 0 0-1 1v1H3.5a1 1 0 1 0 0 2h.544l.82 9.015A2 2 0 0 0 6.856 17h6.288a2 2 0 0 0 1.992-1.985L15.956 6h.544a1 1 0 1 0 0-2H14V3a1 1 0 0 0-1-1H7Zm5 2H8v0h4v0Zm-3 4a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0V9a1 1 0 0 0-1-1Zm4 1a1 1 0 1 0-2 0v5a1 1 0 1 0 2 0V9Z" />
+          </svg>
         </button>
 
         <!-- Restore Resource Link -->
@@ -126,7 +155,14 @@
           class="toolbar-button hover:text-primary-500 px-2 disabled:opacity-50 disabled:pointer-events-none"
           @click.stop="openRestoreModal"
         >
-          <Icon type="refresh" />
+          <svg
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M4.457 4.457A7 7 0 0 1 15.95 6H14a1 1 0 1 0 0 2h4a1 1 0 0 0 1-1V3a1 1 0 1 0-2 0v1.382A9 9 0 1 0 19 10a1 1 0 1 0-2 0 7 7 0 1 1-12.543-5.543Z" />
+          </svg>
         </button>
 
         <DeleteResourceModal
