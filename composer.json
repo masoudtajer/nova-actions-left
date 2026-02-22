@@ -1,6 +1,5 @@
 {
     "name": "masoudtajer/nova-actions-left",
-    "version":"4.0.4",
     "description": "Laravel Nova actions on the left",
     "keywords": [
         "laravel",
