@@ -350,6 +350,10 @@ export default {
   },
 
   computed: {
+    currentUser() {
+      return this.$store?.getters?.currentUser ?? {}
+    },
+
     updateURL() {
       if (this.viaManyToMany) {
         return this.$url(
@@ -425,13 +429,9 @@ export default {
     },
 
     canBeImpersonated() {
-      const user =
-        typeof Nova !== 'undefined' && typeof Nova.config === 'function'
-          ? Nova.config('user')
-          : null
-
       return (
-          !!user?.canImpersonate && this.resource.authorizedToImpersonate
+          Boolean(this.currentUser.canImpersonate) &&
+          this.resource.authorizedToImpersonate
       )
     },
   },
