@@ -68,7 +68,26 @@
         >
           <span class="flex items-center gap-1">
             <span>
-              <Icon name="eye" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-5 w-5"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178a1.012 1.012 0 010 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.964-7.178z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg>
             </span>
           </span>
         </Link>
@@ -96,7 +115,21 @@
         >
           <span class="flex items-center gap-1">
             <span>
-              <Icon name="pencil-square" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-5 w-5"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M16.862 4.487l1.687-1.688a2.25 2.25 0 113.182 3.182l-1.688 1.687m-3.181-3.181L7.5 13.848V17.25h3.402l9.36-9.361m-3.181-3.182l3.181 3.182"
+                />
+              </svg>
             </span>
           </span>
         </Link>
