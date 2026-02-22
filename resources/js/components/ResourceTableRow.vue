@@ -68,26 +68,7 @@
         >
           <span class="flex items-center gap-1">
             <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                class="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178a1.012 1.012 0 010 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.964-7.178z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path></svg>
             </span>
           </span>
         </Link>
@@ -115,27 +96,13 @@
         >
           <span class="flex items-center gap-1">
             <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                class="h-5 w-5"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M16.862 4.487l1.687-1.688a2.25 2.25 0 113.182 3.182l-1.688 1.687m-3.181-3.181L7.5 13.848V17.25h3.402l9.36-9.361m-3.181-3.182l3.181 3.182"
-                />
-              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"></path></svg>
             </span>
           </span>
         </Link>
 
         <!-- Delete Resource Link -->
-        <Button
+        <button
             v-if="
             authorizedToDeleteAnyResources &&
             (!resource.softDeleted || viaManyToMany)
@@ -144,13 +111,15 @@
             v-tooltip.click="__(viaManyToMany ? 'Detach' : 'Delete')"
             :aria-label="__(viaManyToMany ? 'Detach' : 'Delete')"
             :dusk="`${resource.id.value}-delete-button`"
-            icon="trash"
-            variant="action"
             :disabled="!resource.authorizedToDelete"
-        />
+            type="button"
+            class="inline-flex items-center justify-center h-9 w-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-danger-500 dark:hover:[&:not(:disabled)]:text-danger-500 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"></path></svg>
+        </button>
 
         <!-- Restore Resource Link -->
-        <Button
+        <button
             v-if="
             authorizedToRestoreAnyResources &&
             resource.softDeleted &&
@@ -162,9 +131,24 @@
             :dusk="`${resource.id.value}-restore-button`"
             type="button"
             @click.stop="openRestoreModal"
-            icon="arrow-path"
-            variant="action"
-        />
+            class="inline-flex items-center justify-center h-9 w-9 text-gray-500 dark:text-gray-400 hover:[&:not(:disabled)]:text-primary-500 dark:hover:[&:not(:disabled)]:text-primary-500 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            class="h-5 w-5"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.023 9.348h4.992V4.356m-1.388 11.79A9 9 0 113.982 8.854M7.977 14.652H2.985v4.992"
+            />
+          </svg>
+        </button>
 
         <DeleteResourceModal
             :mode="viaManyToMany ? 'detach' : 'delete'"
